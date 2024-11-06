@@ -1,0 +1,26 @@
+import random
+
+def generate_random_array():
+    size = 10
+    return [random.randint(1, 100) for i in range(size)]
+
+"""
+temp = []
+for i in range(size):
+    temp.append(random.randint(1, 100))
+"""
+
+def sum_even_odd(numbers):
+    even_sum = sum(num for num in numbers if num % 2 == 0)
+    odd_sum = sum(num for num in numbers if num % 2 != 0)
+    return even_sum, odd_sum
+
+def main():
+    random_array = generate_random_array()
+    print("Random array:", random_array)
+    even_sum, odd_sum = sum_even_odd(random_array)  
+    print(f"Sum of even numbers: {even_sum} and Sum of odd numbers: {odd_sum}")
+
+main()
+
+

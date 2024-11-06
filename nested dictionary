@@ -1,0 +1,55 @@
+
+def add_task(id, status, x):
+    temp_dict = {"id": a, "status": b}
+    x.append(temp_dict)
+    return x
+    
+def update(id,status,x):
+    for task in x:
+        if x["id"] == id:
+            task["status"] = "stopped"
+            
+def remove_task():
+    rem = input("Enter task name to remove: ")
+    for t in x:
+        if x["task"] == task:
+            x.remove(t)
+            return
+    
+def display_task(x):
+    for task in x:
+        print(f"id: {x["id"]} , status: {x["status"]}")
+    
+def running_task():
+    for task in x:
+        if task["status"] == "running":
+            print(f"id : {task["id"]}, status : {task["status"]}")
+
+def start():
+    x = []
+    print("Choose: 1/2/3/4/5/6 ")
+    choice=int(input())
+
+    if choice==1:
+        print(add_task(1,"running", x))
+        print(add_task(2,"Stopped", x))
+
+    elif choice==2:
+        id = int(input("Enter the taskId : "))
+        status = input("Enter the status : ")
+        if check_if_task_exists(id):
+            update_task(id, status)
+            print("\nUpdated Task\n")
+        print(f"")
+
+    elif choice==3:
+        taskId = int(input("Enter the taskId : "))
+        remove_task(taskId)
+
+    if choice==4:
+        display_task()
+
+    if choice==5:
+        running_task()
+   
+start()
