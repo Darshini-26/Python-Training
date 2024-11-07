@@ -1,3 +1,7 @@
+#QUESTION: CREATE A LIST WITH DICTIONARY AS ELEMENTS AND CREATE A MENU WITH FUNCTIONS:
+#ADD TASK, UPDATE TASK, REMOVE TASK, PRINT ALL TASK AND EXIT
+
+
 
 def add_task(id, status, x):
     temp_dict = {"id": a, "status": b}

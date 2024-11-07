@@ -1,7 +1,9 @@
-
+#QUESTION: CREATE A DICTIONARY WITH KEYS- STATUS CODE, STATUS MESSAGE AND DATA
+# IF MULTIPLES ARE FETCHED, STATUS CODE MUST PRINT 1 AND STATUS MESSAGE MUST BE "SUCCESS"
+# IF MULTIPLES ARE NOT FETCHED, STATUS CODE MUST PRINT -1 AND STATUS MESSAGE MUST BE "Cannot be multiplied"
 
 def display(n):
-    x= {dictionary
+    x= {
         "code":-1,
         "msg":"Cannot be multiplied",
         "data" : None
