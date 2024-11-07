@@ -5,7 +5,7 @@ import random
 quality_pass_rate = 0.9
 
 # Function to simulate production
-def produce_products(hours):
+def produce_products(hours,production_rates,inventory):
     for hour in range(1, hours + 1):
         print(f"Hour {hour}:")
         for product, rate in production_rates.items():
@@ -14,7 +14,7 @@ def produce_products(hours):
             print(f"Produced {produced} units of Product {product}. Current inventory: {inventory[product]}")
 
 # Function to monitor inventory
-def monitor_inventory(threshold):
+def monitor_inventory(threshold,production_rates,inventory):
     print("\nMonitoring inventory:")
     for product in inventory:
         if inventory[product] < threshold:
@@ -23,7 +23,7 @@ def monitor_inventory(threshold):
             print(f"Added 1 unit to Product {product}. Current inventory: {inventory[product]}")
 
 # Function to perform quality checks
-def quality_check():
+def quality_check(inventory):
     print("\nQuality check process:")
     quality_check_passed = {}
     for product in inventory:
@@ -60,16 +60,16 @@ def run_manufacturing_simulation():
 }
 
     # Produce products
-    produce_products(total_hours)
+    produce_products(total_hours,production_rates,inventory)
 
     # Monitor inventory
-    monitor_inventory(threshold)
+    monitor_inventory(threshold,production_rates,inventory)
 
     # Perform quality checks
-    quality_results = quality_check()
+    quality_results = quality_check(inventory)
 
     # Summarize quality checks
-    summarize_quality_checks(quality_results)
+    summarize_quality_checks(quality_results,production_rates,inventory)
 
     # Final inventory summary
     print("\nFinal Inventory Summary:")
