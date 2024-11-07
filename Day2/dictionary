@@ -1,7 +1,7 @@
 
 
 def display(n):
-    x= {
+    x= {dictionary
         "code":-1,
         "msg":"Cannot be multiplied",
         "data" : None
