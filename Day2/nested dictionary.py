@@ -1,30 +1,32 @@
 #QUESTION: CREATE A LIST WITH DICTIONARY AS ELEMENTS AND CREATE A MENU WITH FUNCTIONS:
 #ADD TASK, UPDATE TASK, REMOVE TASK, PRINT ALL TASK AND EXIT
 
-task=[]
+pr=[]
 
 def create_task(taskid,status):
     t={"taskid":taskid,"status":status}
-    task.append(t)
+    pr.append(t)
     return f"Task {taskid} is added"
 
 def update_task(taskid,_status):
-    for i in task:
+    for i in pr:
         if i["taskid"]==taskid:
             i["status"]==_status
             return f"Task {taskid} is updated to {_status}"
         return f"Task not found"
 
 def remove_task(taskid,_status):
-    for i in task:
+    for i in pr:
         if i["taskid"]==taskid:
-            task.remove(i)
+            pr.remove(i)
             return f"Task {taskid} is removed"
         return f"Task not found"
     
 def print_task():
-    for i in task:
-        return f"Task: {i["taskid"]} , status: {i["status"]}"
+    if pr:
+        return pr
+    else:
+        return ("No tasks")
 
 
 def start():
@@ -55,8 +57,10 @@ def start():
             print(rem)
 
         elif choice==4:
-            pr=print_task()
-            print(pr)
+            x=print_task()
+            for i in x:
+                print (f"Task: {i["taskid"]} , status: {i["status"]}")
+    
 
         elif choice==5:
             print("exiting the program")

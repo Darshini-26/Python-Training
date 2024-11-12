@@ -8,4 +8,4 @@ class Task:
         self.location=location
 
     def __str__(self):
-        return f"{self.taskid}-{self.taskname}-{self.priority}-{self.status}-{self.location}"
+        return f"taskid {self.taskid}- taskname {self.taskname}- priority {self.priority}- status {self.status}- location {self.location}"

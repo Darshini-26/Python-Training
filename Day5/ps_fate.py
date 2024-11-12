@@ -6,6 +6,7 @@ def fate():
     print(task_object1)
 
     task_object2=product(2,"Bag",500)
+    print(task_object2)
 
     lo=Logic()
     la=lo.add_product(task_object1)
@@ -21,10 +22,17 @@ def fate():
     else:
         print("Product is not found")
 
+
+    ld=lo.discount(10)
+    print("Discount applied")
+
     va=lo.view_all()
     print("All products:")
     for i in va:
         print(i)
+
+
+
 
 
 

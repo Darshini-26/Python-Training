@@ -22,3 +22,9 @@ class Logic:
             
     def view_all(self):
         return self.products
+    
+    def discount(self,percentage):
+        for i in self.products:
+            i.price=i.price-(i.price*percentage//100)
+        return False
+

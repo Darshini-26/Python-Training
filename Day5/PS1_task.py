@@ -5,4 +5,4 @@ class product:
         self.price=price
 
     def __str__(self):
-        return f"id {self.id}- name {self.name}- price {self.price}"
+        return f"id :{self.id} name :{self.name} price: {self.price}"

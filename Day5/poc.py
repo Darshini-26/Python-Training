@@ -24,7 +24,8 @@ def sort_location(tasks):
     return sorted(tasks, key=lambda i: i.location)
 
 def filter_location(tasks,location):
-    return [i for i in tasks if i.location==location]
+    #return [i for i in tasks if i.location==location]
+    return filter(lambda i:i.location==location,tasks) 
 
 print("Based on taskname")
 a=sort_taskname(tasks)
@@ -46,7 +47,7 @@ for i in c:
 print()
 
 print("Filtering Based on location")
-d=filter_location(tasks,"Cbe")
+d=filter_location(tasks,"Chennai")
 for i in d:
     print(i)
 print()
