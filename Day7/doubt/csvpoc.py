@@ -34,7 +34,7 @@ def read_products_from_csv(filename='emp.csv'):
         next(reader)
         for row in reader:
             emp_object= Emp.from_csv_row(row)
-            emp.append(emp_detail)
+            emp.append(emp_object)
         
     return emp
 

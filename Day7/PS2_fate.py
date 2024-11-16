@@ -28,7 +28,7 @@ for order in orders:
     print(order)
 
 # Calculate Total Cost of All Orders
-print("\nCalculating Total Cost of All Orders:")
+print("\nCalculating Total Cost of All Orders")
 total_cost = order_manager.calculate_total_cost()
 print(f"Total cost of all orders: {total_cost}")
 
