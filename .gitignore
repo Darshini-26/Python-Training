@@ -1,1 +1,4 @@
 ws/
+**__pycache__/
+**venv/
+Assignments/venv/
